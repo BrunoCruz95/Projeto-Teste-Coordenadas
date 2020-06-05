@@ -14,6 +14,9 @@ public class Jogo {
 		do {
 			int[][] vetor = new int[5][5];
 			vetor[4][4] = -1;
+			vetor[3][4] = -2;
+			vetor[2][2] = -3;
+			vetor[4][3] = -4;
 			vetor[linha][coluna] = 1;
 			for (int i = 0; i < 5; i++) {
 				System.out.print("\t    ");
@@ -21,10 +24,22 @@ public class Jogo {
 					if (vetor[i][j] == -1) {
 						System.out.print("[🍕 ]");
 					}
+					if(vetor[i][j] == -2) {
+						System.out.print("[🌶]");
+					}
+					if(vetor[i][j] == -3) {
+						System.out.print("[🥕]");
+					}
+					if(vetor[i][j] == -4) {
+						System.out.print("[🍓]");
+					}
+					
 					if (vetor[i][j] == 1) {
 						if (vetor[4][4] == 1) {
 							System.out.print("[😁]");
-						} else {
+						}else if(vetor[4][3] == 1 || vetor[3][4] == 1 || vetor[2][2] == 1) {
+							System.out.print("[😔]");
+						} else {	
 							System.out.print("[😕]");
 						}
 						linhaAntiga = i;
@@ -40,9 +55,14 @@ public class Jogo {
 				}
 			}
 			if (vetor[4][4] == 1) {
-				System.out.println("\nPARABÉNS O ROSTINHO TRISTE ESTÁ FELIZ AGORA");
+				System.out.println("\n\t    PARABÉNS VOCÊ GANHOU");
 				System.exit(0);
 			}
+			if (vetor[4][3] == 1 || vetor[3][4] == 1 || vetor[2][2] == 1) {
+				System.out.println("\n\n\t     VOCÊ PERDEU");
+				System.exit(0);
+			}
+			
 			System.out.print("\n");
 			System.out.print("Direção: ");
 			var = sc.nextInt();
@@ -127,6 +147,7 @@ public class Jogo {
 		System.out.println("                                          ");
 		System.out.println("OBJETIVO:  O ROSTINHO TRISTE (😕)         ");
 		System.out.println("           DEVE CHEGAR ATÉ A COMIDA (🍕) ");
+		System.out.println("           CUIDADO COM AS OUTRAS COMIDAS (🌶,🥕,🍓)");
 		System.out.println("--------------------------------------------");
 	}
 }
