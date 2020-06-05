@@ -28,7 +28,7 @@ public class Jogo {
 						System.out.print("[🌶]");
 					}
 					if(vetor[i][j] == -3) {
-						System.out.print("[🥕]");
+						System.out.print("[🍒]");
 					}
 					if(vetor[i][j] == -4) {
 						System.out.print("[🍓]");
@@ -132,7 +132,8 @@ public class Jogo {
 
 	static void Menu() {
 		System.out.println("------------------- MENU -------------------");
-		System.out.println("SIGLAS:     CIMA                      - CM ");
+		System.out.println("SIGLAS:     								 ");
+		System.out.println("            CIMA                      - CM");
 		System.out.println("	    BAIXO                     - BX ");
 		System.out.println("	    ESQUERDA                  - ES ");
 		System.out.println("	    DIREITA                   - DI ");
@@ -141,13 +142,15 @@ public class Jogo {
 		System.out.println("	    CIMA DIAGONAL SECUNDARIA  - CDS");
 		System.out.println("	    BAIXO DIAGONAL SECUNDARIA - BDP");
 		System.out.println("                                          ");
-		System.out.println("COMANDOS:  7-CDP      8-CM    9-CDS       ");
+		System.out.println("COMANDOS:");
+		System.out.println("           7-CDP      8-CM    9-CDS       ");
 		System.out.println("           4-ES               6-DI        ");
 		System.out.println("           1-BDS      2-BX    3-BDP       ");
 		System.out.println("                                          ");
-		System.out.println("OBJETIVO:  O ROSTINHO TRISTE (😕)         ");
+		System.out.println("OBJETIVO:");
+		System.out.println("           O ROSTINHO TRISTE (😕)         ");
 		System.out.println("           DEVE CHEGAR ATÉ A COMIDA (🍕) ");
-		System.out.println("           CUIDADO COM AS OUTRAS COMIDAS (🌶,🥕,🍓)");
+		System.out.println("           CUIDADO COM AS OUTRAS COMIDAS (🌶,🍒,🍓)");
 		System.out.println("--------------------------------------------");
 	}
 }
