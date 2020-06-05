@@ -16,31 +16,37 @@ public class Jogo {
 			vetor[4][4] = -1;
 			vetor[linha][coluna] = 1;
 			for (int i = 0; i < 5; i++) {
+				System.out.print("\t    ");
 				for (int j = 0; j < 5; j++) {
-					if(vetor[i][j] == -1) {
-						System.out.print("[*]");
+					if (vetor[i][j] == -1) {
+						System.out.print("[🍕 ]");
 					}
 					if (vetor[i][j] == 1) {
-						System.out.print("[o]");
+						if (vetor[4][4] == 1) {
+							System.out.print("[😁]");
+						} else {
+							System.out.print("[😕]");
+						}
 						linhaAntiga = i;
 						colunaAntiga = j;
 					}
 					if (vetor[i][j] == 0) {
-						System.out.print("[ ]");
+						System.out.print("[  ]");
 					}
-					
+
 					if (j == 4) {
 						System.out.print("\n");
 					}
 				}
 			}
-			if(vetor[4][4] == 1) {
-				System.out.println("\nParab�ns voc� chegou l� !!!");
+			if (vetor[4][4] == 1) {
+				System.out.println("\nPARABÉNS O ROSTINHO TRISTE ESTÁ FELIZ AGORA");
 				System.exit(0);
 			}
 			System.out.print("\n");
+			System.out.print("Direção: ");
 			var = sc.nextInt();
-			
+
 			if (var == 4) {
 				if (colunaAntiga == 0) {
 					coluna = colunaAntiga;
@@ -103,20 +109,24 @@ public class Jogo {
 			}
 		} while (true);
 	}
+
 	static void Menu() {
 		System.out.println("------------------- MENU -------------------");
-		System.out.println("|SIGLAS:    CIMA                      - CM |");
-		System.out.println("|	    BAIXO                     - BX |");
-		System.out.println("|	    ESQUERDA                  - ES |");
-		System.out.println("|	    DIREITA                   - DI |");
-		System.out.println("|	    CIMA DIAGONAL PRINCIPAL   - CDP|");
-		System.out.println("|	    BAIXO DIAGONAL PRINCIPAL  - BDP|");
-		System.out.println("|	    CIMA DIAGONAL SECUNDARIA  - CDS|");
-		System.out.println("|	    BAIXO DIAGONAL SECUNDARIA - BDP|");
-		System.out.println("|                                          |");
-		System.out.println("|COMANDOS:  7-CDP      8-CM    9-CDS       |");
-		System.out.println("|           4-ES               6-DI        |");
-		System.out.println("|           1-BDS      2-BX    3-BDP       |");
+		System.out.println("SIGLAS:     CIMA                      - CM ");
+		System.out.println("	    BAIXO                     - BX ");
+		System.out.println("	    ESQUERDA                  - ES ");
+		System.out.println("	    DIREITA                   - DI ");
+		System.out.println("	    CIMA DIAGONAL PRINCIPAL   - CDP");
+		System.out.println("	    BAIXO DIAGONAL PRINCIPAL  - BDP");
+		System.out.println("	    CIMA DIAGONAL SECUNDARIA  - CDS");
+		System.out.println("	    BAIXO DIAGONAL SECUNDARIA - BDP");
+		System.out.println("                                          ");
+		System.out.println("COMANDOS:  7-CDP      8-CM    9-CDS       ");
+		System.out.println("           4-ES               6-DI        ");
+		System.out.println("           1-BDS      2-BX    3-BDP       ");
+		System.out.println("                                          ");
+		System.out.println("OBJETIVO:  O ROSTINHO TRISTE (😕)         ");
+		System.out.println("           DEVE CHEGAR ATÉ A COMIDA (🍕) ");
 		System.out.println("--------------------------------------------");
 	}
 }
