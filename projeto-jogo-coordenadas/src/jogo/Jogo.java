@@ -1,8 +1,8 @@
-package teste;
+package jogo;
 
 import java.util.Scanner;
 
-public class Teste2 {
+public class Jogo {
 
 	static Scanner sc;
 
@@ -10,11 +10,16 @@ public class Teste2 {
 		sc = new Scanner(System.in);
 		int var = 0, linha = 0, coluna = 0;
 		int linhaAntiga = 0, colunaAntiga = 0;
+		Menu();
 		do {
 			int[][] vetor = new int[5][5];
+			vetor[4][4] = -1;
 			vetor[linha][coluna] = 1;
 			for (int i = 0; i < 5; i++) {
 				for (int j = 0; j < 5; j++) {
+					if(vetor[i][j] == -1) {
+						System.out.print("[*]");
+					}
 					if (vetor[i][j] == 1) {
 						System.out.print("[o]");
 						linhaAntiga = i;
@@ -23,13 +28,19 @@ public class Teste2 {
 					if (vetor[i][j] == 0) {
 						System.out.print("[ ]");
 					}
+					
 					if (j == 4) {
 						System.out.print("\n");
 					}
 				}
 			}
+			if(vetor[4][4] == 1) {
+				System.out.println("\nParabéns você chegou lá !!!");
+				System.exit(0);
+			}
 			System.out.print("\n");
 			var = sc.nextInt();
+			
 			if (var == 4) {
 				if (colunaAntiga == 0) {
 					coluna = colunaAntiga;
@@ -91,5 +102,21 @@ public class Teste2 {
 				coluna = colunaAntiga;
 			}
 		} while (true);
+	}
+	static void Menu() {
+		System.out.println("------------------- MENU -------------------");
+		System.out.println("|SIGLAS:    CIMA                      - CM |");
+		System.out.println("|	    BAIXO                     - BX |");
+		System.out.println("|	    ESQUERDA                  - ES |");
+		System.out.println("|	    DIREITA                   - DI |");
+		System.out.println("|	    CIMA DIAGONAL PRINCIPAL   - CDP|");
+		System.out.println("|	    BAIXO DIAGONAL PRINCIPAL  - BDP|");
+		System.out.println("|	    CIMA DIAGONAL SECUNDARIA  - CDS|");
+		System.out.println("|	    BAIXO DIAGONAL SECUNDARIA - BDP|");
+		System.out.println("|                                          |");
+		System.out.println("|COMANDOS:  7-CDP      8-CM    9-CDS       |");
+		System.out.println("|           4-ES               6-DI        |");
+		System.out.println("|           1-BDS      2-BX    3-BDP       |");
+		System.out.println("--------------------------------------------");
 	}
 }
