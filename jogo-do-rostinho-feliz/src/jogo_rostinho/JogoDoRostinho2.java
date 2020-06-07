@@ -1,8 +1,8 @@
-package jogo;
+package jogo_rostinho;
 
 import java.util.Scanner;
 
-public class Jogo2 {
+public class JogoDoRostinho2 {
 
 	static Scanner sc;
 

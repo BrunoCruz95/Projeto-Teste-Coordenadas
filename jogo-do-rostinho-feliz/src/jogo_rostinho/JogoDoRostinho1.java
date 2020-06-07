@@ -1,8 +1,8 @@
-package jogo;
+package jogo_rostinho;
 
 import java.util.Scanner;
 
-public class Jogo1 {
+public class JogoDoRostinho1 {
 
 	static Scanner sc;
 
@@ -23,24 +23,24 @@ public class Jogo1 {
 				System.out.print("\t    ");
 				for (int j = 0; j < 5; j++) {
 					if (vetor[i][j] == -1) {
-						System.out.print("[🍕 ]");
+						System.out.print("[�?� ]");
 					}
 					if(vetor[i][j] == -2) {
 						System.out.print("[🌶]");
 					}
 					if(vetor[i][j] == -3) {
-						System.out.print("[🍒]");
+						System.out.print("[�?�]");
 					}
 					if(vetor[i][j] == -4) {
-						System.out.print("[🍓]");
+						System.out.print("[�?�]");
 					}
 					if(vetor[i][j] == -5) {
-						System.out.print("[🍎]");
+						System.out.print("[�?�]");
 					}
 					
 					if (vetor[i][j] == 1) {
 						if (vetor[4][4] == 1) {
-							System.out.print("[😁]");
+							System.out.print("[�?]");
 						}else if(vetor[1][0] == 1 ||vetor[4][3] == 1 || vetor[3][4] == 1 || vetor[2][2] == 1) {
 							System.out.print("[😔]");
 						} else {	
@@ -153,8 +153,8 @@ public class Jogo1 {
 		System.out.println("                                          ");
 		System.out.println("OBJETIVO:");
 		System.out.println("           O ROSTINHO TRISTE (😕)         ");
-		System.out.println("           DEVE CHEGAR ATÉ A COMIDA (🍕) ");
-		System.out.println("           CUIDADO COM AS OUTRAS COMIDAS (🌶,🍒,🍓,🍎)");
+		System.out.println("           DEVE CHEGAR ATÉ A COMIDA (�?�) ");
+		System.out.println("           CUIDADO COM AS OUTRAS COMIDAS (🌶,�?�,�?�,�?�)");
 		System.out.println("----------------------------------------------------");
 	}
 }
