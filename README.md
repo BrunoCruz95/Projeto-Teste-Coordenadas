@@ -6,3 +6,5 @@ Esses jogos simples foram criados aparte de alguns conhecimentos que obtive dura
 * Resumo: É Nessesario 2 jogadores, 1º Jogador vai ficar com o "x", e o 2º Jogador com a "o", o usuario terá que digitar a linha a coluna desejada.
 # Jogo da Forca
 * Resumo: É necessario no mínimo 2 jogadores, sendo que, um irá informar o nome e a dica a ser descoberto pelo o outro jogador, e ele terá que digitar letra por letra, terá apenas 6 vidas.
+# Jogo da Cruzadinha
+* Em andamento...
